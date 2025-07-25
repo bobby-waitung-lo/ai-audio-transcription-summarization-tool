@@ -13,7 +13,7 @@ st.set_page_config(page_title="AI Audio Transcription and Summarization", layout
 @st.cache_resource
 def load_models():
     whisper_model = whisper.load_model("base")
-    summarizer = pipeline("summarization", model="facebook/bart-large-cnn", framework="pt")
+    summarizer = pipeline("summarization", model="facebook/bart-large-cnn", framework="pt", device=-1)
     hf_pipeline = HuggingFacePipeline(pipeline=summarizer)
     prompt = PromptTemplate(
         input_variables=["text"],
