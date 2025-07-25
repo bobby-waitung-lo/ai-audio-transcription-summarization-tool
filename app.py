@@ -44,7 +44,7 @@ uploaded_file = st.file_uploader("Choose an audio file", type=["mp3", "wav"], he
 
 if uploaded_file is not None:
     # Save the uploaded file temporarily
-    temp_audio_path = "./temp_audio.mp3"
+    temp_audio_path = "temp_audio.mp3"
     with open(temp_audio_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
     
