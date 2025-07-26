@@ -51,7 +51,8 @@ if uploaded_file is not None:
     # Show a loading spinner while processing
     with st.spinner("Processing audio... This may take a moment."):
         try:
-            transcription, summary = process_audio(temp_audio_path)
+            # transcription, summary = process_audio(temp_audio_path)
+            transcription, summary = process_audio("temp_audio.mp3")
             
             # Display results
             st.subheader("Transcription")
